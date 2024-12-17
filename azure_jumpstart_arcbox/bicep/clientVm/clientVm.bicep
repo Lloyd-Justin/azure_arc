@@ -115,7 +115,7 @@ param addsDomainName string = 'jumpstart.local'
 param customLocationRPOID string = ''
 
 @description('The SKU of the VMs disk')
-param vmsDiskSku string = 'Standard_LRS'
+param vmsDiskSku string = 'Premium_LRS'
 
 @description('Use this parameter to enable or disable debug mode for the automation scripts on the client VM, effectively configuring PowerShell ErrorActionPreference to Break. Default is false.')
 param debugEnabled bool = false
@@ -128,7 +128,7 @@ param autoShutdownEmailRecipient string = ''
 var bastionName = '${namingPrefix}-Bastion'
 var publicIpAddressName = deployBastion == false ? '${vmName}-PIP' : '${bastionName}-PIP'
 var networkInterfaceName = '${vmName}-NIC'
-var osDiskType = 'Standard_LRS'
+var osDiskType = 'Premium_LRS' //'Standard_LRS'
 var PublicIPNoBastion = {
   id: publicIpAddress.id
 }
