@@ -1,6 +1,5 @@
 # yaml-language-server: $schema=https://aka.ms/configuration-dsc-schema/0.2
 properties:
-
   resources:
     - resource: HyperVDsc/VMHyperV
       id: namingPrefixStage-Win2K19
@@ -8,10 +7,10 @@ properties:
         description: Configure VM namingPrefixStage-Win2K19
       settings:
         Name: namingPrefixStage-Win2K19
-        SwitchName: 'InternalNATSwitch'
+        SwitchName: "InternalNATSwitch"
         VhdPath: F:\Virtual Machines\ArcBox-Win2K19.vhdx
         ProcessorCount: 2
-        StartupMemory: '4GB'
+        StartupMemory: "3GB"
         RestartIfNeeded: true
         State: Running
         Generation: 2
@@ -24,10 +23,10 @@ properties:
         description: Configure VM namingPrefixStage-Win2K22
       settings:
         Name: namingPrefixStage-Win2K22
-        SwitchName: 'InternalNATSwitch'
+        SwitchName: "InternalNATSwitch"
         VhdPath: F:\Virtual Machines\ArcBox-Win2K22.vhdx
         ProcessorCount: 2
-        StartupMemory: '4GB'
+        StartupMemory: "3GB"
         RestartIfNeeded: true
         State: Running
         Generation: 2
@@ -40,10 +39,10 @@ properties:
         description: Configure VM namingPrefixStage-Ubuntu-01
       settings:
         Name: namingPrefixStage-Ubuntu-01
-        SwitchName: 'InternalNATSwitch'
+        SwitchName: "InternalNATSwitch"
         VhdPath: F:\Virtual Machines\ArcBox-Ubuntu-01.vhdx
-        ProcessorCount: 2
-        StartupMemory: '4GB'
+        ProcessorCount: 1
+        StartupMemory: "2GB"
         RestartIfNeeded: true
         State: Running
         Generation: 2
@@ -56,10 +55,10 @@ properties:
         description: Configure VM namingPrefixStage-Ubuntu-02
       settings:
         Name: namingPrefixStage-Ubuntu-02
-        SwitchName: 'InternalNATSwitch'
+        SwitchName: "InternalNATSwitch"
         VhdPath: F:\Virtual Machines\ArcBox-Ubuntu-02.vhdx
-        ProcessorCount: 2
-        StartupMemory: '4GB'
+        ProcessorCount: 1
+        StartupMemory: "2GB"
         RestartIfNeeded: true
         State: Running
         Generation: 2

@@ -20,7 +20,8 @@ param windowsOSVersion string = '2022-datacenter-g2'
 param azureLocation string = resourceGroup().location
 
 @description('The size of the VM')
-param vmSize string = 'Standard_B2ms'
+//param vmSize string = 'Standard_B2ms'
+param vmSize string = 'Standard_B1ms'
 
 @description('Choice to deploy Azure Bastion')
 param deployBastion bool = false
@@ -37,7 +38,7 @@ var virtualNetworkName = '${namingPrefix}-VNet'
 var dcSubnetName = '${namingPrefix}-DC-Subnet'
 var addsPrivateIPAddress = '10.16.2.100'
 var bastionName = '${namingPrefix}-Bastion'
-var osDiskType = 'Premium_LRS'
+var osDiskType = 'Standard_LRS'
 var subnetRef = resourceId('Microsoft.Network/virtualNetworks/subnets', virtualNetworkName, dcSubnetName)
 var networkInterfaceRef = networkInterface.id
 var publicIpAddressName = ((!deployBastion) ? '${clientVMName}-PIP' : '${bastionName}-PIP')
@@ -94,7 +95,7 @@ resource clientVM 'Microsoft.Compute/virtualMachines@2022-03-01' = {
         managedDisk: {
           storageAccountType: osDiskType
         }
-        diskSizeGB: 1024
+        diskSizeGB: 128
       }
       imageReference: {
         publisher: 'MicrosoftWindowsServer'
